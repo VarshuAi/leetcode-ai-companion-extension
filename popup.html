@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    body {
+      width: 320px;
+      margin: 0;
+      padding: 20px;
+      background: #0f172a; /* Slate Dark Background */
+      color: #f8fafc;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    h2 {
+      margin: 0;
+      font-size: 16px;
+      font-weight: 700;
+      color: #3b82f6; /* Modern Blue Accent */
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      text-align: center;
+    }
+    p {
+      margin: 0;
+      font-size: 12px;
+      color: #94a3b8;
+      line-height: 1.5;
+      text-align: center;
+    }
+    .input-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    label {
+      font-size: 11px;
+      font-weight: 600;
+      color: #64748b;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    input {
+      padding: 10px 12px;
+      background: #1e293b;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 8px;
+      color: #f8fafc;
+      font-size: 13px;
+      outline: none;
+      transition: all 0.2s;
+    }
+    input:focus {
+      border-color: #3b82f6;
+      box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+    }
+    button {
+      padding: 11px;
+      background: #3b82f6;
+      border: none;
+      border-radius: 8px;
+      color: #ffffff;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    button:hover {
+      background: #2563eb;
+    }
+    button:active {
+      transform: scale(0.98);
+    }
+    .status {
+      font-size: 11px;
+      text-align: center;
+      min-height: 16px;
+      transition: color 0.2s;
+    }
+    .status.success {
+      color: #10b981;
+    }
+    .status.error {
+      color: #ef4444;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>LeetCode AI Setup</h2>
+    <p>Configure your Gemini API Key below to unlock one-click autosolving and mentor hints directly on LeetCode.</p>
+    
+    <div class="input-group">
+      <label for="api-key">Gemini API Key</label>
+      <input type="password" id="api-key" placeholder="AIzaSy..." />
+    </div>
+
+    <button id="save-btn">Save Configurations</button>
+    <div class="status" id="status-msg"></div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

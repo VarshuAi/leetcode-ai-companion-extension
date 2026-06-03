@@ -1,0 +1,38 @@
+{
+  "manifest_version": 3,
+  "name": "LeetCode AI Companion",
+  "version": "1.0.0",
+  "description": "A premium, smooth glassmorphic companion for LeetCode. Provides dynamic hints and one-click code solutions.",
+  "permissions": [
+    "storage"
+  ],
+  "host_permissions": [
+    "https://leetcode.com/graphql",
+    "https://generativelanguage.googleapis.com/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icons/icon48.png"
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://leetcode.com/*"],
+      "js": ["content-isolated.js"],
+      "run_at": "document_end"
+    },
+    {
+      "matches": ["https://leetcode.com/*"],
+      "js": ["content-main.js"],
+      "run_at": "document_end",
+      "world": "MAIN"
+    }
+  ]
+}

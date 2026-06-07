@@ -38,7 +38,7 @@ version: 1.0
 type: Repository
 author: VarshuAi
 description: >
-  No description available for this project.
+  name: leetcode-ai-companion-extension version: 1.0 type: Repository author: VarshuAi description: >   No description available for this project. primary_tech: JavaScript
 primary_tech: JavaScript
 ```
 
